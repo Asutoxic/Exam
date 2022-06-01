@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 4</title>
+</head>
+
+<body>
+    <script>
+        class Staff {
+            constructor(Fullname, Email) {
+                this.Fullname = Fullname;
+                this.Email = Email;
+            };
+            setFullname = function (Value) {
+                return this.Fullname = Value;
+            };
+            getFullname = function () {
+                return this.Fullname;
+            };
+            setEmail = function (Value) {
+                return this.Email = Value;
+            };
+            getEmail = function () {
+                return this.Email;
+            };
+            toString = function () {
+                return `Fullname: ${this.Fullname}<br>Email: ${this.Email}<br>`;
+            };
+        }
+        const david = new Staff("David", "david@gmail.com");
+        david.setFullname("David Do");
+        david.setEmail("david.do@gmail.com");
+        document.write(david.toString());
+        const staffs = [
+            david,
+            new Staff("Vu Tran", "vutran@gmail.com"),
+            new Staff("CodeGym", "codegym@codegym.com"),
+        ];
+        staffs.forEach(item => {
+            document.write(item.toString())
+        })
+    </script>
+</body>
+
+</html>
